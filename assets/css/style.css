@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  --green: #5ca720;
+  --dark-grey: #161616;
+  --light-grey: #a5a1a1;
+  --lighter-grey: #f9f9f9;
+}
+body,
+ul,
+li,
+p,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.header {
+  max-width: 1440px;
+  padding: 10px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo {
+  padding: 20px;
+}
+.menu-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.menu-nav ul li + li {
+  margin-left: 5px;
+}
+.menu-nav ul li a {
+  display: block;
+  padding: 20px;
+}
+.menu-nav ul li a img {
+  width: 21px;
+  transition: opacity 0.2s;
+}
+.menu-nav ul li a:hover img {
+  opacity: 0.5;
+}
+
+.banner {
+  padding: 7%;
+  background: url("../img/banner.png") center center;
+}
+.banner img {
+  margin: 0 auto;
+}
+
+.products-header {
+  padding: 30px calc((100vw - 1440px) / 2 + 10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.products-header-container {
+  border-bottom: 1px solid var(--light-grey);
+}
+.products-header span {
+  padding: 0 10px;
+  font-size: 1.125em;
+  color: var(--dark-grey);
+}
+.products-header span:first-child {
+  font-size: 1.25em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.products-list {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.products-item {
+  color: var(--dark-grey);
+  font-weight: bold;
+  margin: 25px;
+}
+.products-item-title {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.products-item-price {
+  font-size: 1.25em;
+}
+.products-item-price span {
+  color: var(--green);
+  font-size: 1.3em;
+}
+.products-item img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+.footer-container {
+  padding: 0 calc((100% - 1440px) / 2);
+  background-color: var(--lighter-grey);
+  border-top: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--light-grey);
+}
+.footer-newsletter {
+  padding: 25px 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.footer-nav {
+  font-size: 1.125em;
+  font-weight: bold;
+  padding: 25px 0;
+  flex: 1 1 300px;
+}
+.footer-nav a {
+  color: var(--dark-grey);
+}
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+.newsletter-form label {
+  font-size: 1.125em;
+  color: var(--dark-grey);
+  font-weight: bold;
+  display: block;
+  margin-bottom: 15px;
+}
+.newsletter-form-fields {
+  display: flex;
+  flex-wrap: wrap;
+}
+.newsletter-form-fields input {
+  background-color: white;
+  color: var(--light-grey);
+  border: 1px solid var(--light-grey);
+  outline: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 1.125em;
+  padding: 15px;
+  flex: 1;
+}
+.newsletter-form-fields button {
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: var(--green);
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 1.125em;
+  padding: 15px 30px;
+  flex: 1;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.newsletter-form-fields button:hover {
+  opacity: 0.8;
+}
+@media screen and (max-width: 406px) {
+  .footer-nav {
+    padding-top: 0;
+  }
+  .newsletter-form-fields input {
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .newsletter-form-fields button {
+    border-radius: 5px;
+  }
+}
+
+.footer-social {
+  padding: 0 calc((100% - 1440px) / 2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-icons,
+.cards-icons {
+  display: flex;
+  align-items: center;
+  padding: 25px 10px;
+}
+.social-icons li img {
+  width: 40px;
+  height: auto;
+  transition: opacity 0.2s;
+}
+.social-icons li a:hover img {
+  opacity: 0.5;
+}
+.social-icons li + li,
+.cards-icons li + li {
+  margin-left: 15px;
+}
+@media screen and (max-width: 345px) {
+  .social-icons,
+  .cards-icons {
+    margin: 0 auto;
+  }
+}
